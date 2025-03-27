@@ -12,9 +12,9 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(45deg, #2196f3, #ff4081, #00c853, #ffeb3b);
-    background-size: 400% 400%;
-    animation: backgroundAnimation 10s infinite alternate;
+    background: linear-gradient(45deg, #2196f3, #ff4081, #00c853, #ffeb3b); /* Gradient background */
+    background-size: 400% 400%;  /* Ensures the gradient moves */
+    animation: backgroundAnimation 10s infinite alternate;  /* Makes the gradient move */
 }
 
 /* Quote Box (Looks like a Window) */
