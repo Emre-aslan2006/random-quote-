@@ -1,15 +1,12 @@
-/* Reset all margins and padding */
+/* COMPLETE CENTERING FIX */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Animated Gradient Background */
-@keyframes backgroundAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+html {
+    height: 100%;
 }
 
 body {
@@ -18,59 +15,74 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px; /* Safe spacing from edges */
+    padding: 20px;
+    margin: 0;
     background: linear-gradient(45deg, #2196f3, #ff4081, #00c853, #ffeb3b);
     background-size: 400% 400%;
     animation: backgroundAnimation 10s infinite alternate;
+    line-height: 1.6;
 }
 
-/* Quote Box */
 .quote-box {
-    width: 100%; /* Full width of parent */
-    max-width: 400px; /* Maximum width */
+    width: 100%;
+    max-width: 400px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    top: -10px; /* Fine vertical adjustment */
 }
 
-/* Header */
 .header {
     background: #2196f3;
     color: white;
-    padding: 15px;
+    padding: 18px;
     text-align: center;
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
-/* Content */
 .content {
-    padding: 25px;
+    padding: 30px 25px;
     text-align: center;
 }
 
 #quote {
-    font-size: 18px;
+    font-size: 1.1rem;
     font-style: italic;
-    margin-bottom: 25px;
-    line-height: 1.5;
-    min-height: 80px; /* Prevents layout shift when quotes change */
+    margin: 0 auto 25px;
+    line-height: 1.6;
+    min-height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 10px;
 }
 
 button {
     background: #007bff;
     color: white;
     border: none;
-    padding: 12px 25px;
-    font-size: 16px;
+    padding: 12px 28px;
+    font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 button:hover {
     background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+body { outline: 2px solid red; }
+.quote-box { outline: 2px solid blue; }
