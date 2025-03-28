@@ -1,4 +1,11 @@
-/* Moving Gradient Background */
+/* Reset all margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Animated Gradient Background */
 @keyframes backgroundAnimation {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -10,52 +17,57 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    background: linear-gradient(45deg, #2196f3, #ff4081, #00c853, #ffeb3b); /* Gradient background */
-    background-size: 400% 400%;  /* Ensures the gradient moves */
-    animation: backgroundAnimation 10s infinite alternate;  /* Makes the gradient move */
+    min-height: 100vh;
+    padding: 20px; /* Safe spacing from edges */
+    background: linear-gradient(45deg, #2196f3, #ff4081, #00c853, #ffeb3b);
+    background-size: 400% 400%;
+    animation: backgroundAnimation 10s infinite alternate;
 }
 
-/* Quote Box (Looks like a Window) */
+/* Quote Box */
 .quote-box {
-    width: 400px;
+    width: 100%; /* Full width of parent */
+    max-width: 400px; /* Maximum width */
     background: white;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
     overflow: hidden;
-    position: relative;
 }
 
-/* Window Header */
+/* Header */
 .header {
     background: #2196f3;
     color: white;
-    padding: 10px;
+    padding: 15px;
+    text-align: center;
     font-weight: bold;
 }
 
-/* Quote Content */
+/* Content */
 .content {
-    padding: 20px;
+    padding: 25px;
+    text-align: center;
 }
 
-p {
+#quote {
     font-size: 18px;
     font-style: italic;
-    margin-bottom: 20px;
-    transition: opacity 0.5s ease-in-out;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    min-height: 80px; /* Prevents layout shift when quotes change */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Button Style */
 button {
     background: #007bff;
     color: white;
     border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+    padding: 12px 25px;
+    font-size: 16px;
     border-radius: 5px;
+    cursor: pointer;
     transition: background 0.3s ease;
 }
 
